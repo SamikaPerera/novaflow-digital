@@ -10,8 +10,7 @@ const EMAILJS_TEMPLATE_ID = 'template_r4evmcp'
 const EMAILJS_PUBLIC_KEY = 'ThFSkIurfTuOir9dj'
 
 const servicesList = [
-  'Website Development', 'AI Automations', 'SEO Strategy',
-  'Content Creation', 'Website Maintenance', 'Full Package', 'Other',
+  'Website Development', 'AI model Creation', 'Other',
 ]
 
 const budgetList = [
