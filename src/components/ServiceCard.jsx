@@ -3,8 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Globe, Bot, PenTool, ArrowRight, ChevronDown, Check } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { cardHover } from '../animations/variants'
+import { Globe, Sparkles, Bot, PenTool, ArrowRight, ChevronDown, Check } from 'lucide-react'
 
-const iconMap = { Globe, Bot, PenTool }
+const iconMap = { Globe, Sparkles, Bot, PenTool }
+
 
 export default function ServiceCard({ service, index }) {
   const Icon = iconMap[service.icon] || Globe

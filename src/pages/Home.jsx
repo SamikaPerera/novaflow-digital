@@ -77,9 +77,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI Showcase */}
+      {/* AI Model Showcase */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-nova-950/50 to-cyan-950/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-950/30 to-violet-950/30 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <motion.div
@@ -90,22 +90,22 @@ export default function Home() {
             >
               <span className="section-label mb-5 inline-flex">
                 <Zap size={10} className="fill-nova-400 text-nova-400" />
-                AI Automation
+                AI Model Creation
               </span>
               <h2 className="section-title mb-5">
-                Your Business Running<br />
-                <span className="gradient-text">24/7 on Autopilot</span>
+                Your Brand, Represented by<br />
+                <span className="gradient-text">A Stunning AI Model</span>
               </h2>
               <p className="text-white/50 leading-relaxed mb-7">
-                We build intelligent automation systems that handle lead qualification,
-                email nurturing, content generation, and customer support — all without
-                human intervention. Your team focuses on what matters most.
+                We design and build realistic AI influencers and virtual brand ambassadors
+                tailored to your brand identity. Get consistent, high-quality content
+                every month — without expensive photoshoots or model bookings.
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  { icon: TrendingUp, text: 'Average 18 hours saved per week per team' },
-                  { icon: Shield, text: '99.9% uptime with enterprise-grade reliability' },
-                  { icon: Clock, text: 'Live in as little as 2 weeks' },
+                  { icon: TrendingUp, text: 'Save thousands vs traditional photoshoots' },
+                  { icon: Shield, text: 'Consistent brand identity across all content' },
+                  { icon: Clock, text: 'First AI model delivered in 7 days' },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-nova-500/10 flex items-center justify-center">
@@ -116,7 +116,7 @@ export default function Home() {
                 ))}
               </div>
               <Link to="/services" className="btn-primary inline-flex">
-                Explore AI Services
+                See How It Works
                 <ArrowRight size={14} />
               </Link>
             </motion.div>
@@ -128,15 +128,14 @@ export default function Home() {
               viewport={{ once: true }}
               className="relative"
             >
-              {/* AI flow visualization */}
               <div className="glass-strong gradient-border rounded-2xl p-6 space-y-4">
-                <p className="text-white/40 text-xs font-mono mb-2">Live automation pipeline</p>
+                <p className="text-white/40 text-xs font-mono mb-2">AI model content pipeline</p>
                 {[
-                  { step: 'Lead Capture', status: 'active', count: '247 today' },
-                  { step: 'AI Qualification', status: 'active', count: '231 qualified' },
-                  { step: 'Personalized Email', status: 'active', count: '189 sent' },
-                  { step: 'CRM Update', status: 'active', count: '189 updated' },
-                  { step: 'Sales Alert', status: 'active', count: '42 hot leads' },
+                  { step: 'Brand Brief', count: 'Received' },
+                  { step: 'AI Model Design', count: 'Character built' },
+                  { step: 'Content Generation', count: '60 posts created' },
+                  { step: 'Video & Reels', count: '12 videos rendered' },
+                  { step: 'Ready to Post', count: '1 month of content' },
                 ].map((item, i) => (
                   <div key={item.step} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-nova-500/20 flex items-center justify-center flex-shrink-0">
@@ -151,14 +150,13 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Floating stat */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 className="absolute -top-4 -right-4 glass-strong gradient-border rounded-xl px-4 py-3"
               >
-                <p className="text-white font-display font-bold text-xl">18hrs</p>
-                <p className="text-white/40 text-xs">saved per week</p>
+                <p className="text-white font-display font-bold text-xl">7 days</p>
+                <p className="text-white/40 text-xs">to first AI model</p>
               </motion.div>
             </motion.div>
           </div>

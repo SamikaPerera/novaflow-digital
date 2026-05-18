@@ -20,19 +20,19 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col items-center gap-6"
         >
-          {/* Badge */}
+{/* Badge */}
           <motion.div variants={fadeUp}>
             <span className="section-label">
               <Zap size={10} className="fill-nova-400 text-nova-400" />
-              AI-Powered Digital Agency
+              AI Model Creation & Web Development
             </span>
           </motion.div>
 
           {/* Headline */}
           <motion.h1 variants={fadeUp} className="section-title max-w-4xl">
-            We Build Digital{' '}
+            We Create{' '}
             <span className="relative">
-              <span className="gradient-text">Experiences</span>
+              <span className="gradient-text">AI Models</span>
               <motion.span
                 className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-nova-500/60 to-transparent"
                 initial={{ scaleX: 0 }}
@@ -41,13 +41,13 @@ export default function Hero() {
               />
             </span>
             <br />
-            That Drive Real Growth
+            That Grow Your Brand
           </motion.h1>
 
           {/* Subheadline */}
           <motion.p variants={fadeUp} className="section-subtitle text-center mx-auto">
-            Websites that convert. AI automations that scale. SEO that compounds.
-            NovaFlow delivers the complete digital growth stack for ambitious brands.
+            Custom AI influencers and virtual brand ambassadors that create content, 
+            drive engagement, and sell your products — 24/7, no photoshoots needed.
           </motion.p>
 
           {/* CTAs */}

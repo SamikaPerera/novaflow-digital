@@ -19,11 +19,9 @@ const GithubIcon = () => (
 
 const footerLinks = {
   Services: [
-    { label: 'Web Development', href: '/services' },
-    { label: 'AI Automations', href: '/services' },
-    { label: 'SEO Strategy', href: '/services' },
+    { label: 'AI Model Creation', href: '/services' },
+    { label: 'Website Development', href: '/services' },
     { label: 'Content Creation', href: '/services' },
-    { label: 'Maintenance', href: '/services' },
   ],
   Company: [
     { label: 'About', href: '/about' },
@@ -69,7 +67,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-xs">
-              AI-powered digital agency building the next generation of high-performance brands and automated businesses.
+            AI model creation and web development agency helping brands grow with stunning virtual influencers and high-converting websites.
             </p>
             <div className="flex items-center gap-3">
               {socials.map(({ Icon, href, label }) => (
