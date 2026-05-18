@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Globe, Sparkles, Bot, PenTool, ArrowRight, ChevronDown, Check } from 'lucide-react'
+import { Globe, Sparkles, Bot, PenTool, ArrowRight, Check } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { cardHover } from '../animations/variants'
 
@@ -39,7 +39,7 @@ export default function ServiceCard({ service, index }) {
         <p className="text-nova-400 text-xs font-mono mb-3">{service.tagline}</p>
         <p className="text-white/45 text-sm leading-relaxed mb-5">{service.description}</p>
 
-        {/* Features */}
+{/* Features */}
         <ul className="space-y-2 mb-5">
           {service.features.slice(0, 3).map(f => (
             <li key={f} className="flex items-center gap-2 text-xs text-white/50">
@@ -55,10 +55,17 @@ export default function ServiceCard({ service, index }) {
           className="flex items-center gap-1.5 text-xs font-medium text-nova-400 hover:text-nova-300 transition-colors group/btn"
         >
           {expanded ? 'Show less' : 'Learn more'}
-          <ChevronDown
-            size={13}
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
             className={`transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
-          />
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
         </button>
       </div>
 
