@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import { Check, Globe, Bot, PenTool, ArrowRight, Zap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { scaleIn } from '../animations/variants'
+import { Check, Globe, Bot, PenTool, ArrowRight, Zap, Sparkles } from 'lucide-react'
+const iconMap = { Globe, Bot, PenTool, Sparkles }
 
-const iconMap = { Globe, Bot, PenTool }
 
 const currencies = {
   USD: { symbol: '$', rate: 1 },
