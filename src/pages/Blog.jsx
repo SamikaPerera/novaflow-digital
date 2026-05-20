@@ -25,7 +25,26 @@ export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedId, setExpandedId] = useState(null)
   const [expandedFeatured, setExpandedFeatured] = useState(false)
-  
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterStatus, setNewsletterStatus] = useState('') // 'loading' | 'success' | 'error'
+
+const handleSubscribe = async () => {
+  if (!newsletterEmail) return
+  setNewsletterStatus('loading')
+  try {
+await emailjs.send(
+  'service_xzbh7j6',
+  'template_e9u8jyn',
+  { subscriber_email: newsletterEmail },
+  'ThFSklurfTuOir9dj'
+)
+    setNewsletterStatus('success')
+    setNewsletterEmail('')
+  } catch (err) {
+    console.log('EmailJS Error:', err) // this will show the exact error
+    setNewsletterStatus('error')
+  }
+}
 
   const featured = blogPosts.find(p => p.featured)
   const regular = blogPosts.filter(p => !p.featured)
@@ -245,6 +264,48 @@ export default function Blog() {
               ))}
             </motion.div>
           )}
+        </div>
+      </section>
+
+{/* Newsletter */}
+      <section className="pb-16">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-strong gradient-border rounded-2xl p-8 text-center"
+          >
+            <span className="section-label mb-4 inline-flex">
+              <Zap size={10} className="fill-nova-400 text-nova-400" />
+              Newsletter
+            </span>
+            <h3 className="font-display font-bold text-xl text-white mb-2">Get Insights in Your Inbox</h3>
+            <p className="text-white/40 text-sm mb-6">Weekly strategies on AI, growth, and digital excellence. No fluff.</p>
+            <div className="flex gap-3">
+              <input
+                type="email"
+                placeholder="your@email.com"
+                value={newsletterEmail}
+                onChange={e => setNewsletterEmail(e.target.value)}
+                className="flex-1 glass rounded-xl px-4 py-3 text-sm text-white placeholder-white/25 border border-white/[0.08] focus:border-nova-500/40 focus:outline-none"
+              />
+              <button
+                onClick={handleSubscribe}
+                disabled={newsletterStatus === 'loading'}
+                className="btn-primary text-xs py-3 px-5 whitespace-nowrap disabled:opacity-50"
+              >
+                {newsletterStatus === 'loading' ? 'Sending...' : 'Subscribe'}
+              </button>
+            </div>
+            {newsletterStatus === 'success' && (
+              <p className="text-nova-400 text-xs mt-3">✓ You're subscribed! Welcome aboard.</p>
+            )}
+            {newsletterStatus === 'error' && (
+              <p className="text-red-400 text-xs mt-3">Something went wrong. Please try again.</p>
+            )}
+            <p className="text-white/20 text-xs mt-3">No spam · Unsubscribe anytime</p>
+          </motion.div>
         </div>
       </section>
 
